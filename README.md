@@ -10,6 +10,12 @@ The form features included:
 - using react-hook-form with material-ui
 - file uploads using the dropzone ( using the react dropzone )
 
+## Installation
+`npm install`
+
+## Installed packages
+`npm i react-hook-form react-router-dom material-ui @material-ui/core @material-ui/icons react-phone-input-2 react-dropzone yup @hookform/resolvers react-confetti sweetalert2`
+
 ## Available Scripts
 
 In the project directory, you can run:
