@@ -1,14 +1,18 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Step1 from '../components/Step1';
-import Step2 from '../components/Step2';
-import Step3 from '../components/Step3';
-import Result from '../components/Result';
+import { Step1, Step2, Step3, Result } from '../components';
+import { Container, Typography } from '@material-ui/core';
 
-function App() {
+const App = () => {
     return (
-        <div className='App'>
-            <h1>Ultimate React Form</h1>
+        <Container maxWidth='sm' className='App'>
+            <Typography
+                component='h1'
+                variant='h3'
+                style={{ marginTop: 100, fontWeight: 700 }}
+            >
+                Ultimate React Form
+            </Typography>
             <Routes>
                 <Route path='/' element={<Step1 />} />
                 <Route path='/step2' element={<Step2 />} />
@@ -16,8 +20,8 @@ function App() {
                 <Route path='/result' element={<Result />} />
                 <Route path='*' element={<h1>Step not found</h1>} />
             </Routes>
-        </div>
+        </Container>
     );
-}
+};
 
 export default App;
