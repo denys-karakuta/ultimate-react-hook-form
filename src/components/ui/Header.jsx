@@ -1,5 +1,5 @@
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
-export const Header = ({ text, ...props }) => {
-    return <Typography {...props}>{text}</Typography>;
+export const Header = ({ children, ...props }) => {
+    return <Typography {...props}>{children}</Typography>;
 };

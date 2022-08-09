@@ -14,7 +14,8 @@ The form features included:
 `npm install`
 
 ## Installed packages
-`npm i react-hook-form react-router-dom material-ui @material-ui/core @material-ui/icons react-phone-input-2 react-dropzone yup @hookform/resolvers react-confetti sweetalert2`
+`npm i react-hook-form react-router-dom npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+react-phone-input-2 react-dropzone yup @hookform/resolvers react-confetti sweetalert2`
 
 ## Available Scripts
 

@@ -1,9 +1,11 @@
 import { forwardRef } from 'react';
-import { TextField } from 'material-ui';
+import { TextField } from '@mui/material';
 
-const Input = forwardRef((props, ref) => {
+export const Input = forwardRef((props, ref) => {
     return (
         <TextField
+            fullWidth
+            id='outlined-basic'
             variant='outlined'
             margin='normal'
             inputRef={ref}
@@ -11,5 +13,3 @@ const Input = forwardRef((props, ref) => {
         />
     );
 });
-
-export default Input;
