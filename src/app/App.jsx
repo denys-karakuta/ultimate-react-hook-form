@@ -1,19 +1,16 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Step1, Step2, Step3, Result } from '../components';
-import { Header } from '../components/ui/Header';
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
+
+const style = { marginTop: '100px', fontWeight: 700 };
 
 const App = () => {
     return (
-        <Container maxWidth='sm' className='App'>
-            <Header
-                component='h1'
-                variant='h3'
-                style={{ marginTop: 100, fontWeight: 700 }}
-            >
+        <Container maxWidth='sm' className='App' sx={style}>
+            <Typography component='h1' variant='h3'>
                 Ultimate React Form
-            </Header>
+            </Typography>
             <Routes>
                 <Route path='/' element={<Step1 />} />
                 <Route path='/step2' element={<Step2 />} />

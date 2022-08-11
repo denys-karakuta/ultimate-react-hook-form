@@ -4,10 +4,11 @@ import { TextField } from '@mui/material';
 export const Input = forwardRef((props, ref) => {
     return (
         <TextField
+            type='text'
             fullWidth
-            id='outlined-basic'
             variant='outlined'
             margin='normal'
+            autoComplete='off'
             inputRef={ref}
             {...props}
         />
