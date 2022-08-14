@@ -1,3 +1,4 @@
+import './style.css';
 import { Box, Grid, Typography } from '@mui/material';
 import StepForm from '../StepForm/StepForm';
 import { PrimaryButton } from '../UI/PrimaryButton';
@@ -14,13 +15,8 @@ const Step1 = () => {
         setValues(data);
     };
 
-    const style = {
-        padding: '0 50px',
-        borderRadius: '15px',
-    };
-
     return (
-        <Box sx={style}>
+        <Box className='box'>
             <Typography component='h2' variant='h4' mt={2} mb={2}>
                 👌 Step 1
             </Typography>

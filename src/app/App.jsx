@@ -3,11 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import { Step1, Step2, Step3, Result } from '../components';
 import { Container, Typography } from '@mui/material';
 
-const style = { marginTop: '100px', fontWeight: 700 };
-
 const App = () => {
     return (
-        <Container maxWidth='sm' className='App' sx={style}>
+        <Container maxWidth='sm' className='App'>
             <Typography component='h1' variant='h3'>
                 Ultimate React Form
             </Typography>
