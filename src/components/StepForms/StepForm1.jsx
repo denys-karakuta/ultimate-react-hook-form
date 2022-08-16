@@ -2,9 +2,14 @@ import { Input } from '../UI/Input';
 import { Form } from '../UI/Form';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { schema } from '../../utils/schema';
+import { schemaStep1 } from '../../utils/schemaStep1';
+import { useData } from '../../context/DataContext';
+import { useNavigate } from 'react-router-dom';
 
-const StepForm = ({ onSubmit, data }) => {
+const StepForm1 = () => {
+    const navigate = useNavigate();
+    const { data, setValues } = useData();
+
     const {
         register,
         handleSubmit,
@@ -16,8 +21,13 @@ const StepForm = ({ onSubmit, data }) => {
             lastName: data.lastName,
         },
         mode: 'onBlur',
-        resolver: yupResolver(schema),
+        resolver: yupResolver(schemaStep1),
     });
+
+    const onSubmit = (data) => {
+        navigate('/step2');
+        setValues(data);
+    };
 
     return (
         <Form id='form' onSubmit={handleSubmit(onSubmit)}>
@@ -43,4 +53,4 @@ const StepForm = ({ onSubmit, data }) => {
     );
 };
 
-export default StepForm;
+export default StepForm1;

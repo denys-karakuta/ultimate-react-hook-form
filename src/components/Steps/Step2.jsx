@@ -1,24 +1,36 @@
-import { Typography } from '@mui/material';
-import StepForm from '../StepForm/StepForm';
-import { useData } from '../../context/DataContext';
-import { useNavigate } from 'react-router-dom';
+import './style.css';
+import { Box, Grid, Typography } from '@mui/material';
+import StepForm2 from '../StepForms/StepForm2';
+import { PrimaryButton } from '../UI/PrimaryButton';
+import ArrowRightAltRoundedIcon from '@mui/icons-material/ArrowRightAltRounded';
 
 const Step2 = () => {
-    const { data, setValues } = useData();
-    const navigate = useNavigate();
-
-    const onSubmit = (data) => {
-        navigate('/step3');
-        setValues(data);
-    };
-
     return (
-        <div>
+        <Box className='box'>
             <Typography component='h2' variant='h4' mt={2} mb={2}>
                 👌 Step 2
             </Typography>
-            <StepForm onSubmit={onSubmit} data={data} />
-        </div>
+            <StepForm2 />
+            <Grid container spacing={2} justifyContent='flex-end'>
+                <Grid item>
+                    <PrimaryButton
+                        variant='outlined'
+                        startIcon={<ArrowRightAltRoundedIcon />}
+                    >
+                        Prev
+                    </PrimaryButton>
+                </Grid>
+                <Grid item>
+                    <PrimaryButton
+                        form='form'
+                        type='submit'
+                        endIcon={<ArrowRightAltRoundedIcon />}
+                    >
+                        Next
+                    </PrimaryButton>
+                </Grid>
+            </Grid>
+        </Box>
     );
 };
 

@@ -20,11 +20,18 @@ h1 {
     font-weight: 700;
 }
 
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+
 .App {
     margin-top: 100px;
-    text-align: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.input {
+    margin-top: 20px;
 }
