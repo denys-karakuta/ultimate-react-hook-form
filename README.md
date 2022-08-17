@@ -13,13 +13,24 @@ The form features included:
 ## Installation
 `npm install`
 
-## Installed packages
+## Libraries
 `npm i react-hook-form react-router-dom npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
 react-phone-input-2 react-dropzone yup @hookform/resolvers react-confetti sweetalert2`
+
+## Server
+`npm i -D express express-fileupload cors morgan express-rate-limit concurrently`
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run start:server`
+Start server for upload files
+
+### `npm run dev`
+Start backend and frontend at the same time
+
+_"dev": "concurrently --kill-others \"npm run start:server\" \"npm run start\""_
 
 ### `npm start`
 
