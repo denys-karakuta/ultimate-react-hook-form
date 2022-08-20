@@ -54,8 +54,8 @@ const StepForm2 = () => {
                     <Checkbox
                         defaultValue={data.hasPhone}
                         defaultChecked={data.hasPhone}
-                        {...register('hasPhone')}
                         name='hasPhone'
+                        {...register('hasPhone')}
                     />
                 }
                 label='Do you have a phone number?'
