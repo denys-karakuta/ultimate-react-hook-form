@@ -3,6 +3,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import StepForm2 from '../StepForms/StepForm2';
 import { PrimaryButton } from '../UI/PrimaryButton';
 import ArrowRightAltRoundedIcon from '@mui/icons-material/ArrowRightAltRounded';
+import { Link } from 'react-router-dom';
 
 const Step2 = () => {
     return (
@@ -13,12 +14,14 @@ const Step2 = () => {
             <StepForm2 />
             <Grid container spacing={2} justifyContent='flex-end'>
                 <Grid item>
-                    <PrimaryButton
-                        variant='outlined'
-                        startIcon={<ArrowRightAltRoundedIcon />}
-                    >
-                        Prev
-                    </PrimaryButton>
+                    <Link to='/'>
+                        <PrimaryButton
+                            variant='outlined'
+                            startIcon={<ArrowRightAltRoundedIcon />}
+                        >
+                            Prev
+                        </PrimaryButton>
+                    </Link>
                 </Grid>
                 <Grid item>
                     <PrimaryButton

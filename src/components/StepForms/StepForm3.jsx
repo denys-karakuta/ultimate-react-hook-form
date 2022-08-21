@@ -12,11 +12,15 @@ const StepForm3 = () => {
     const { data, setValues } = useData();
 
     const { control, handleSubmit, setValue } = useForm({
+        defaultValues: {
+            files: data.files,
+        },
         resolver: yupResolver(schemaStep3),
     });
 
     const onSubmit = (data) => {
-        console.log('submit form', data);
+        navigate('/result');
+        setValues(data);
     };
 
     return (

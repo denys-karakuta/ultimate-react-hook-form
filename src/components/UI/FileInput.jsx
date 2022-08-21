@@ -11,7 +11,7 @@ import {
 import { CloudUpload, InsertDriveFile } from '@mui/icons-material';
 
 const styles = {
-    root: {
+    paper: {
         backgroundColor: '#eee',
         textAlign: 'center',
         cursor: 'pointer',
@@ -53,7 +53,7 @@ export const FileInput = ({ control, name, setValue, accept }) => {
                         {({ getRootProps, getInputProps }) => (
                             <Paper
                                 variant='outlined'
-                                sx={styles.root}
+                                sx={styles.paper}
                                 {...getRootProps()}
                             >
                                 <CloudUpload sx={styles.icon} />
