@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
     Box,
     Grid,
@@ -14,12 +15,12 @@ import {
     TableRow,
     Typography,
 } from '@mui/material';
-import Confetti from 'react-confetti';
 import { InsertDriveFile } from '@mui/icons-material';
-import { useState } from 'react';
-import { useData } from '../../context/DataContext';
-import { PrimaryButton } from '../UI/PrimaryButton';
 import { Link } from 'react-router-dom';
+import Confetti from 'react-confetti';
+
+import { PrimaryButton } from '../UI/PrimaryButton';
+import { useData } from '../../context/DataContext';
 import { sendData } from '../../utils/sendData';
 
 const styles = {
@@ -34,6 +35,7 @@ const styles = {
 const Result = () => {
     const [success, setSuccess] = useState(false);
     const { data } = useData();
+
     const { files } = data;
 
     const entries = Object.entries(data).filter(
@@ -62,6 +64,7 @@ const Result = () => {
             <Typography component='h2' variant='h4' mt={2} mb={2}>
                 👌 Result
             </Typography>
+
             <TableContainer sx={styles.paper} component={Paper}>
                 <Table sx={styles.table} aria-label='simple table'>
                     <TableHead>

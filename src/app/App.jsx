@@ -1,7 +1,9 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { Step1, Step2, Step3, Result } from '../components';
 import { Container, Typography } from '@mui/material';
+
+import { Step1, Step2, Step3, Result } from '../components';
+
+import './App.css';
 
 const App = () => {
     return (
@@ -9,6 +11,7 @@ const App = () => {
             <Typography component='h1' variant='h3'>
                 Ultimate React Form
             </Typography>
+
             <Routes>
                 <Route path='/' element={<Step1 />} />
                 <Route path='/step2' element={<Step2 />} />

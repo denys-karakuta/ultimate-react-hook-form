@@ -1,15 +1,15 @@
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import { schemaStep1 } from '../../utils/schemas/Step1';
+import { useData } from '../../context/DataContext';
 import { Input } from '../UI/Input';
 import { Form } from '../UI/Form';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { schemaStep1 } from '../../utils/schemaStep1';
-import { useData } from '../../context/DataContext';
-import { useNavigate } from 'react-router-dom';
 
 const StepForm1 = () => {
     const navigate = useNavigate();
     const { data, setValues } = useData();
-
     const {
         register,
         handleSubmit,

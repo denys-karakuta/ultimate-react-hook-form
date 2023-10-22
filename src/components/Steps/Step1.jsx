@@ -1,8 +1,10 @@
-import './style.css';
-import { Box, Grid, Typography } from '@mui/material';
-import StepForm1 from '../StepForms/StepForm1';
-import { PrimaryButton } from '../UI/PrimaryButton';
 import ArrowRightAltRoundedIcon from '@mui/icons-material/ArrowRightAltRounded';
+import { Box, Grid, Typography } from '@mui/material';
+
+import { PrimaryButton } from '../UI/PrimaryButton';
+import StepForm1 from '../StepForms/StepForm1';
+
+import './style.css';
 
 const Step1 = () => {
     return (
@@ -10,7 +12,9 @@ const Step1 = () => {
             <Typography component='h2' variant='h4' mt={2} mb={2}>
                 👌 Step 1
             </Typography>
+
             <StepForm1 />
+
             <Grid container justifyContent='flex-end'>
                 <Grid item>
                     <PrimaryButton

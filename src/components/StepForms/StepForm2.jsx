@@ -1,12 +1,14 @@
-import { Input } from '../UI/Input';
-import { Form } from '../UI/Form';
+import { Checkbox, FormControlLabel } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { schemaStep2 } from '../../utils/schemaStep2';
-import { Checkbox, FormControlLabel } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { useData } from '../../context/DataContext';
 import PhoneInput from 'react-phone-input-2';
+
+import { schemaStep2 } from '../../utils/schemas/Step2';
+import { useData } from '../../context/DataContext';
+import { Input } from '../UI/Input';
+import { Form } from '../UI/Form';
+
 import 'react-phone-input-2/lib/material.css';
 
 const StepForm2 = () => {

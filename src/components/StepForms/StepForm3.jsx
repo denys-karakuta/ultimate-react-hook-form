@@ -1,11 +1,12 @@
-import { useNavigate } from 'react-router-dom';
-import { useData } from '../../context/DataContext';
-import { useForm } from 'react-hook-form';
-import { Form } from '../UI/Form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { schemaStep3 } from '../../utils/schemaStep3';
+import { useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+
+import { schemaStep3 } from '../../utils/schemas/Step3';
+import { useData } from '../../context/DataContext';
+import { acceptFiles } from '../../constants';
 import { FileInput } from '../UI/FileInput';
-import { acceptFiles } from '../../utils/constants';
+import { Form } from '../UI/Form';
 
 const StepForm3 = () => {
     const navigate = useNavigate();
